@@ -15,6 +15,10 @@ License: GPLv2 with exceptions
 URL: https://github.com/unbit/uwsgi
 BuildRequires: uwsgi-devel
 BuildRequires: %{python}-devel
+BuildRequires: libuuid-devel
+BuildRequires: pcre-devel
+BuildRequires: openssl-devel
+BuildRequires: libcap-devel
 Requires: %{python}
 Requires: uwsgi-plugin-common
 
@@ -51,6 +55,7 @@ uwsgi --build-plugin "%{_usrsrc}/uwsgi/%{version}/plugins/python %{python}"
 - Clarify this package is intended to work with uwsgi from EPEL
 - Use uwsgi-devel sources instead of duplicate source tarball
 - Filter auto-provides
+- Add missing build requirements
 
 * Wed Jun 17 2015 Carl George <carl.george@rackspace.com> - 2.0.9-1.ius
 - Initial package

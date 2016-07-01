@@ -3,7 +3,7 @@
 %global srcname uwsgi
 
 Name: %{uwsgi}-plugin-%{python}
-Version: 2.0.9
+Version: 2.0.12
 Release: 1.ius%{?dist}
 Summary: uWSGI - Plugin for Python 3.4 support
 Group: System Environment/Daemons
@@ -37,5 +37,8 @@ CFLAGS="%{optflags} -Wno-unused-but-set-variable" %{__python3} uwsgiconfig.py --
 
 
 %changelog
+* Thu Jun 30 2016 Carl George <carl.george@rackspace.com> - 2.0.12-1.ius
+- Update to match current EPEL version
+
 * Wed Jun 17 2015 Carl George <carl.george@rackspace.com> - 2.0.9-1.ius
 - Initial package

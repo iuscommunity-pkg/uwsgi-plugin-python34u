@@ -18,6 +18,9 @@ BuildRequires: %{python}-devel
 Requires: %{python}
 Requires: uwsgi-plugin-common
 
+%{?filter_provides_in: %filter_provides_in %{_libdir}/uwsgi/.*\.so$}
+%{?filter_setup}
+
 
 %description
 This package contains the python plugin for uWSGI.  Designed to work with the
@@ -47,6 +50,7 @@ uwsgi --build-plugin "%{_usrsrc}/uwsgi/%{version}/plugins/python %{python}"
 - Update to match current EPEL version
 - Clarify this package is intended to work with uwsgi from EPEL
 - Use uwsgi-devel sources instead of duplicate source tarball
+- Filter auto-provides
 
 * Wed Jun 17 2015 Carl George <carl.george@rackspace.com> - 2.0.9-1.ius
 - Initial package

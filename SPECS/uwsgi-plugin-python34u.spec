@@ -33,12 +33,13 @@ uwsgi packages in EPEL, but built against %{python} from IUS.
 
 %prep
 %setup -q -c -T
+cp -a %{_usrsrc}/uwsgi/%{version}/plugins/python .
 
 
 %build
 export CFLAGS="%{optflags} -Wno-unused-but-set-variable"
 export PYTHON=%{__python3}
-uwsgi --build-plugin "%{_usrsrc}/uwsgi/%{version}/plugins/python %{python}"
+uwsgi --build-plugin "python %{python}"
 
 
 %install
@@ -52,6 +53,7 @@ uwsgi --build-plugin "%{_usrsrc}/uwsgi/%{version}/plugins/python %{python}"
 %changelog
 * Thu Sep 15 2016 Carl George <carl.george@rackspace.com> - 2.0.13.1-1.ius
 - Latest upstream
+- Copy source file to build directory
 
 * Thu Jun 30 2016 Carl George <carl.george@rackspace.com> - 2.0.12-1.ius
 - Update to match current EPEL version

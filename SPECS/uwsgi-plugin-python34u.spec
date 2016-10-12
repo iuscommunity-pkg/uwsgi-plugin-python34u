@@ -7,7 +7,7 @@
 %global python python34u
 
 Name: uwsgi-plugin-%{python}
-Version: 2.0.13.1
+Version: 2.0.14
 Release: 1.ius%{?dist}
 Summary: uWSGI - Plugin for Python support
 Group: System Environment/Daemons
@@ -51,6 +51,9 @@ uwsgi --build-plugin "python %{python}"
 
 
 %changelog
+* Wed Oct 12 2016 Carl George <carl.george@rackspace.com> - 2.0.14-1.ius
+- Rebuild against uwsgi 2.0.14
+
 * Thu Sep 15 2016 Carl George <carl.george@rackspace.com> - 2.0.13.1-1.ius
 - Latest upstream
 - Copy source file to build directory

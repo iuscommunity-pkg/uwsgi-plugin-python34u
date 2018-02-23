@@ -7,7 +7,7 @@
 %global python python34u
 
 Name: uwsgi-plugin-%{python}
-Version: 2.0.15
+Version: 2.0.16
 Release: 1.ius%{?dist}
 Summary: uWSGI - Plugin for Python support
 Group: System Environment/Daemons
@@ -51,6 +51,9 @@ uwsgi --build-plugin "python %{python}"
 
 
 %changelog
+* Thu Feb 22 2018 Jessica Widener <jessica.widener@rackspace.com> - 2.0.16-1.ius
+- Rebuild against uwsgi 2.0.16
+
 * Tue May 23 2017 Ben Harper <ben.harper@rackspace.com> - 2.0.15-1.ius
 - Rebuild against uwsgi 2.0.15
 
